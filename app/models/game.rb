@@ -6,4 +6,6 @@ class Game < ApplicationRecord
   has_and_belongs_to_many :platforms
   has_and_belongs_to_many :genres
   belongs_to :parent, class_name: 'Game', optional: true
+
+  enum category: { main_game: 0, expansion: 1 }
 end

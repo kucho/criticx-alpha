@@ -16,6 +16,17 @@ class CompaniesController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @company.update(game_params)
+      redirect_to(@company)
+    else
+      render :edit
+    end
+  end
+
   private
 
   def set_company

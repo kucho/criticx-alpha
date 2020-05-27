@@ -7,8 +7,8 @@
   <li>Genre(s): <%= @genres %></li>
 </ul>
 
-<%= link_to "Edit Game", edit_game_path %>
-
+<p>
+  <%= link_to "Edit Game", edit_game_path %>
+  <%= link_to 'Delete Game', game_path, method: :delete, data: {confirm: 'Are you sure, m8?'} %>
+</p>
 <%= link_to "Back to Games", games_path %>
-
-

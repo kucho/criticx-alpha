@@ -7,6 +7,15 @@ class CompaniesController < ApplicationController
   def show
   end
 
+  def new
+    @company = Company.new(company_params)
+    if @company.save
+      redirect_to companies_path(@company)
+    else
+      render :new
+    end
+  end
+
   private
 
   def set_company

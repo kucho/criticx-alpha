@@ -27,6 +27,11 @@ class CompaniesController < ApplicationController
     end
   end
 
+  def destroy
+    @company.destroy
+    redirect_to companies_path
+  end
+
   private
 
   def set_company
